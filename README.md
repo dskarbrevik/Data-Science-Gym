@@ -22,13 +22,13 @@ At a high level there are three types of "workouts" a.k.a. challenges... but I l
 
 ## How to Get Started on Your Own Workout
 
-Checkout the <a href="https://github.com/dskarbrevik/Data-Science-Gym/blob/master/Machine%20Learning%20Workouts/Iris%20Intro%20Workout%20%5BML1%5D.ipynb">Iris Into Workout</a> notebook to see the format of a workout.
+Checkout the <a href="https://github.com/dskarbrevik/Data-Science-Gym/blob/master/My%20Completed%20Workouts/Iris%20Intro%20Workout%20%5BML1%5D.ipynb">Iris Into Workout</a> notebook to see what a completed workout might look like. You can also look <a href="https://github.com/dskarbrevik/Data-Science-Gym/tree/master/My%20Completed%20Workouts">here</a> for other examples of completed workouts.
 
 Data Science workouts require 1-3 hours of your time and a computer with Python 3.X (Python 2.X will be mostly fine, but may run into some issues).
 
 If you're ready to take a stab at a workout, click on one of the three workout type folders in the repo and choose a workout that catches your eye. Good luck!
 
-note: labeling of notebooks follows a [TYPE#] scheme (i.e. [ML1] = the first machine learning workout)]
+Note: labeling of notebooks follows a [TYPE#] scheme (i.e. [ML1] = the first machine learning workout)]
 
 <br>
 
