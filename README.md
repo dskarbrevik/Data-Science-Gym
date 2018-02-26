@@ -2,6 +2,7 @@
 
 This is a training ground for anyone that wants to sharpen their Data Science skills by simply practicing Data Science.
 
+To see examples of completed data science workouts, click <a href="https://github.com/dskarbrevik/Data-Science-Gym/tree/master/My%20Completed%20Workouts">here</a>.
 
 ## The Big Idea
 
@@ -19,7 +20,7 @@ At a high level there are three types of "workouts" a.k.a. challenges... but I l
 
 <br>
 
-## How to Get Started
+## How to Get Started on Your Own Workout
 
 Checkout the <a href="https://github.com/dskarbrevik/Data-Science-Gym/blob/master/Machine%20Learning%20Workouts/Iris%20Intro%20Workout%20%5BML1%5D.ipynb">Iris Into Workout</a> notebook to see the format of a workout.
 
