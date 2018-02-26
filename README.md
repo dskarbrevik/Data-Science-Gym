@@ -22,9 +22,12 @@ At a high level there are three types of "workouts" a.k.a. challenges... but I l
 
 ## How to Get Started
 
-Checkout the <a href="">Iris Into Workout</a> notebook to see the format of a workout.
+Checkout the <a href="https://github.com/dskarbrevik/Data-Science-Gym/blob/master/Machine%20Learning%20Workouts/Iris%20Intro%20Workout%20%5BML1%5D.ipynb">Iris Into Workout</a> notebook to see the format of a workout.
 
-Notebooks are labeled with a [TYPE #] scheme (i.e. [ML 1] = the first machine learning workout), so
+
+**About notebook naming convention**
+
+Notebooks are labeled with a [TYPE #] scheme (i.e. [ML1] = the first machine learning workout)
 
 <br>
 
