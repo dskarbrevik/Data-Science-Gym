@@ -28,7 +28,7 @@ Data Science workouts require 1-3 hours of your time and a computer with Python 
 
 If you're ready to take a stab at a workout, click on one of the three workout type folders in the repo and choose a workout that catches your eye. Good luck!
 
-Note: labeling of notebooks follows a [TYPE#] scheme (i.e. [ML1] = the first machine learning workout)]
+Note: labeling of notebooks follows a [TYPE#] scheme (i.e. [ML1] = the first machine learning workout)
 
 <br>
 
