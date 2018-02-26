@@ -2,6 +2,14 @@
 
 This is a training ground for anyone that wants to sharpen their Data Science skills by simply practicing Data Science.
 
+This is for people with at least some background in Python programming and Data Science to get more practical experience.
+
+You should have at least some familiarity with (or be OK googling) the following libraries:
+* Numpy
+* Pandas
+* Scikit-learn
+* Tensorflow
+
 To see examples of completed data science workouts, click <a href="https://github.com/dskarbrevik/Data-Science-Gym/tree/master/My%20Completed%20Workouts">here</a>.
 
 ## The Big Idea
@@ -28,7 +36,7 @@ Data Science workouts require 1-3 hours of your time and a computer with Python 
 
 If you're ready to take a stab at a workout, click on one of the three workout type folders in the repo and choose a workout that catches your eye. Good luck!
 
-Note: labeling of notebooks follows a [TYPE#] scheme (i.e. [ML1] = the first machine learning workout)
+Note: labeling of notebooks follows a [TYPE#] scheme (i.e. [ML1] = the first machine learning workout).
 
 <br>
 
