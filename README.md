@@ -2,7 +2,6 @@
 
 This is a training ground for anyone that wants to sharpen their Data Science skills by simply practicing Data Science.
 
-<br>
 
 ## The Big Idea
 
