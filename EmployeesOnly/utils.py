@@ -13,10 +13,14 @@ class Timer(DOMWidget):
 
     times_pressed = 0
     go_time = False
+    times_up = False
     event = threading.Event()
 
     # this method starts and stops the timer based on how many times the user clicked it
     def threaded_timer(self,b,max_time=180):
+        if self.times_up:
+            break
+            
         if self.times_pressed == 0:
             self.times_pressed += 1
             b.description = "PAUSE"
@@ -79,6 +83,7 @@ class Timer(DOMWidget):
         else:
             b.button_style="danger"
             b.description="TIME'S UP!"
+            self.times_up = True
             self.timeup()
 
     # show user a pop-up notification when they run out of time

@@ -4,19 +4,25 @@ from traitlets import Unicode, validate
 import time
 import threading
 
+
+
 class Timer(DOMWidget):
-    _view_name = Unicode('HelloView').tag(sync=True)
-    _view_module = Unicode('hello').tag(sync=True)
-    _view_module_version = Unicode('0.1.0').tag(sync=True)
+    _view_name = Unicode('TimerView').tag(sync=True)
+    _view_module = Unicode('Timer').tag(sync=True)
+    _view_module_version = Unicode('0.2.0').tag(sync=True)
     value = Unicode('00:00:00').tag(sync=True)
 
 
     times_pressed = 0
     go_time = False
     event = threading.Event()
+    times_up = False
 
     # this method starts and stops the timer based on how many times the user clicked it
     def threaded_timer(self,b,max_time=180):
+        if self.times_up:
+            b.disabled = True
+            
         if self.times_pressed == 0:
             self.times_pressed += 1
             b.description = "PAUSE"
@@ -61,12 +67,10 @@ class Timer(DOMWidget):
                         mins = 0
                         hours += 1
                         if hours == 1:
-                            self.one_hour_warning()
-                        elif hours == 2:
                             self.two_hour_warning()
+                        elif hours == 2:
+                            self.one_hour_warning()
                     else:
-                        self.one_hour_warning()
-                        self.event.wait()
                         secs = 0
                         mins += 1
                 else:
@@ -80,6 +84,7 @@ class Timer(DOMWidget):
             b.button_style="danger"
             b.description="TIME'S UP!"
             self.timeup()
+            self.times_up = True
 
     # show user a pop-up notification when they run out of time
     def timeup(self):
@@ -111,7 +116,7 @@ class Timer(DOMWidget):
         ["base/js/dialog"],
         function(dialog) {
             dialog.modal({
-                title: "2 HOURS LEFT,
+                title: "2 HOURS LEFT",
                 body: "Hey there! Just a friendly reminder that you have two more hours.  \
                         Keep up the good work!",
                 buttons: {
@@ -143,6 +148,32 @@ class Timer(DOMWidget):
               }
         );
         """))
+    
+# need this to run to be able to show the timer widget in the front-end    
+
+display(Javascript("""
+
+require.undef('Timer');
+
+define('Timer', ["@jupyter-widgets/base"], function(widgets) {
+
+    var TimerView = widgets.DOMWidgetView.extend({
+
+        render: function() {
+            this.value_changed();
+            this.model.on('change:value', this.value_changed, this);
+        },
+
+        value_changed: function() {
+            this.el.textContent = this.model.get('value');
+        },
+    });
+
+    return {
+        TimerView : TimerView
+    };
+});
+"""))
 
 # once a Timer widget is instantiated, this function should be called to display the Timer
 def show(timer):
